@@ -1,0 +1,22 @@
+name: Google Colab badge update Workflow
+on: [push]
+
+jobs:
+  badges:
+    name: Colab Badge Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout first
+        id: checkout
+        uses: actions/checkout@v2
+
+      - name: Add/Update badges
+        id: badges
+        uses: trsvchn/colab-badge-action@v4
+        with:
+          check: "all"
+          update: true
+          target_branch: main
+
+      - name: push
+        uses: actions-x/commit@v2
