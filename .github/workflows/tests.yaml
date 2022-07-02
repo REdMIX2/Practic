@@ -20,7 +20,14 @@ jobs:
           pip3 install pytest pytest-cov pytest-github-actions-annotate-failures jupyter numpy matplotlib
       - name: Test with pytest
         run: |
+          # My code
           jupyter nbconvert --to script --output "jupyter_assignment_dirty" jupyter_assignment.ipynb
-          jupyter nbconvert --to script matplotlib_assignment.ipynb
+          jupyter nbconvert --to script --output "matplotlib_assignment_dirty" matplotlib_assignment.ipynb
           cat jupyter_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > jupyter_assignment.py
+          cat matplotlib_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > matplotlib_assignment.py
           pytest -s jupyter_tests.py
+          #Dont my code
+          #jupyter nbconvert --to script --output "jupyter_assignment_dirty" jupyter_assignment.ipynb
+          #jupyter nbconvert --to script matplotlib_assignment.ipynb
+          #cat jupyter_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > jupyter_assignment.py
+          #pytest -s jupyter_tests.py
