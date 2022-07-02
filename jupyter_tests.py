@@ -48,7 +48,7 @@ def test_github():
     # print(github_username)
     assert os.getenv('GITHUB_REPOSITORY', '').endswith(github_username), f"Your GitHub username doesn't match. Did you forget to update 'github_username' variable or are you trying to cheat by submitting someone else's work?"
 
-
+#File tests matplotlib_assignment.py
 def test_student_id():
     if Student_ID is not None:
         assert Student_ID > 0 and Student_ID < 100, "Invalid Student ID!"
@@ -58,7 +58,10 @@ def test_task_id():
     if Student_ID is not None:
         assert task_id > 0 and task_id <= 25, "Invalid task ID!"
 
-
+def test_create_images():
+    if task_id is not None:
+        assert subprocess.call("pytest --mpl-generate-path=baseline Create_img_"+str(task_id)+".py", shell=True)
+        
 def test_maths():
     if Student_ID is not None:
         import numpy as np
