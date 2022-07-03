@@ -8,6 +8,7 @@ from matplotlib_assignment import Student_ID, task_id, my_function
     
 #from test_image import CNT_Values
 CNT_Values = 3
+#CNT_argv[task_id]=[
 import os
 
 
@@ -74,9 +75,10 @@ def test_value():
             assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"
     score += 1
         
-#def test_create_images():
-    #if task_id is not None:
-        #assert subprocess.call("pytest --mpl-generate-path=baseline Create_img_"+str(task_id)+".py", shell=True)
+def test_create_images():
+    if task_id is not None:
+        c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_"+str(CNT_Values)+".py", shell=True, check=True)
+        assert c.returncode==0,"Image not generate!"
         
 def test_maths():
     if Student_ID is not None:
