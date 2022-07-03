@@ -91,7 +91,7 @@ def test_task_id():
    # score += 1
 def test_value():
     global score
-    for t in (['a','b','c','d','x','y'])
+    for t in (['a','b','c','d','x','y']):
         try:
             from matplotlib_assignment import t
         except ImportError:
