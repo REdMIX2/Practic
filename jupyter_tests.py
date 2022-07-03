@@ -102,7 +102,8 @@ def test_value():
     for t in param:
         assert exec("from matplotlib_assignment import "+str(t))==None,f"Create a variable '{t}'!Don't forget to initialize it"
         if (t != "x") and (t != "y"):
-            assert (isinstance(eval(t),(int, float)),f"The variable '{t}' is not an int or float!"
+            print(eval(t))
+            assert (isinstance(eval(t),(int, float)) ),f"The variable '{t}' is not an int or float!"
         else:
             print("aaaaa")#assert isinstance(t,(list, tuple, np.array)==True,f"The variable '{t}' is not an array!"
     score += 1
