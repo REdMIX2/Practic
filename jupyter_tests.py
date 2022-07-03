@@ -71,10 +71,10 @@ def test_values():
     CNT_Values = 3
     tmp = globals()
     #from test_image import CNT_Values
-    if CNT_Values >= 1 :
-        assert ( ('a' in tmp) and (isinstance(tmp['a'],(int, float)) ),"Problems a 'a'"
+    if CNT_Values >= 1:
+        assert ( ('a' in tmp) and (isinstance(tmp['a'],(int, float)) )==True,"Problems a 'a'"
         CNT_Values = CNT_Values - 1
-        if CNT_Values >= 1 :
+        if CNT_Values >= 1:
             assert ( ('b' in tmp) and (isinstance(tmp['b'],(int, float)) ),f"Problems a 'b'"
             CNT_Values -= 1
             if CNT_Values >= 1 :
