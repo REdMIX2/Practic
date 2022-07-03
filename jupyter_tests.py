@@ -60,8 +60,9 @@ def test_task_id():
         assert task_id > 0 and task_id <= 25, "Invalid task ID!"
         
 def test_values():
-    global score
+    global score,CNT_Values
     tmp = globals()
+    print("value global=")
     print(tmp)
     #from test_image import CNT_Values
     if CNT_Values > 1 :
@@ -75,7 +76,7 @@ def test_values():
                 CNT_Values -= 1
                 if CNT_Values > 1 :
                     assert ( 'd' in tmp ) and (type(tmp['d']) == int or float),f"Problems a 'd'"
-     score += 1
+    score += 1
         
         
 #def test_create_images():
