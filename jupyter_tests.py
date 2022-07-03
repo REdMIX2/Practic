@@ -93,7 +93,7 @@ def test_value():
     global score
     for t in (["a","b","c","d","x","y"]):
         try:
-            exec("from matplotlib_assignment import"+str(t))
+            exec("from matplotlib_assignment import "+str(t))
         except ImportError:
             print("ggggggg=")
             print(t)
