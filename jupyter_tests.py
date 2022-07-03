@@ -100,7 +100,11 @@ def test_value():
        #     print(t)
     del param[CNT_Values:4]
     for t in param:
-        assert exec("from matplotlib_assignment import "+str(t))==None,f"Create and initialize the variable '{t}'!"
+        assert exec("from matplotlib_assignment import "+str(t))==None,f"Create a variable '{t}'!Don't forget to initialize it"
+        if (t not "x") and (t not "y"):
+            assert (isinstance(t,(int, float)),f"The variable '{t}' is not an int or float!"
+        else:
+            assert (isinstance(t,(list, tuple, np.array)),f"The variable '{t}' is not an array!"
     score += 1
         
 #def test_create_images():
