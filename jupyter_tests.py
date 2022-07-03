@@ -68,14 +68,13 @@ def test_values():
         pass
     global score,CNT_Values
     tmp = globals()
-    print("value global=")
-    print(tmp)
     #from test_image import CNT_Values
     if CNT_Values >= 1 :
-        assert ( 'a' in tmp ) and (type(tmp['a']) == int or float),f"Problems a 'a'"
+        assert 'a' in tmp,f"ddd" 
+        assert ( (type(tmp['a']) == int or float ),f"Problems a 'a'"
         CNT_Values -= 1
         if CNT_Values >= 1 :
-            assert ( 'b' in tmp ) and (type(tmp['b']) == int or float),f"Problems a 'b'"
+            assert (( 'b' in tmp ) and (type(tmp['b']) == int or float)),f"Problems a 'b'"
             CNT_Values -= 1
             if CNT_Values >= 1 :
                 assert ( 'c' in tmp ) and (type(tmp['c']) == int or float),f"Problems a 'c'"
