@@ -63,12 +63,12 @@ def test_task_id():
         
 def test_values():    
     global score
-    global CNT_Values
+    #global CNT_Values
     try:
         from matplotlib_assignment import a,b,c,d,x,y
     except ImportError:
         pass
-
+    CNT_Values = 3
     tmp = globals()
     #from test_image import CNT_Values
     if CNT_Values >= 1 :
