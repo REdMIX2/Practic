@@ -71,8 +71,8 @@ def test_values():
     tmp = globals()
     #from test_image import CNT_Values
     if CNT_Values >= 1 :
-        assert 'a' in tmp,f"ddd" 
-        assert ( (type(tmp['a']) == int or float ),f"Problems a 'a'"
+        assert 'a' in tmp,"ddd" 
+        assert ( (type(tmp['a']) == int or float ),"Problems a 'a'"
         CNT_Values = CNT_Values - 1
         if CNT_Values >= 1 :
             assert (( 'b' in tmp ) and (type(tmp['b']) == int or float)),f"Problems a 'b'"
