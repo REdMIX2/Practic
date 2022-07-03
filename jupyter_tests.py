@@ -98,7 +98,7 @@ def test_value():
        # except ImportError:
        #     print("ggggggg=")
        #     print(t)
-    del param[CNT_Values:3]
+    del param[CNT_Values:4]
     for t in param:
         assert exec("from matplotlib_assignment import "+str(t))==None,f"Create and initialize the variable '{t}'!"
     score += 1
