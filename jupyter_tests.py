@@ -62,34 +62,6 @@ def test_task_id():
     if Student_ID is not None:
         assert task_id > 0 and task_id <= 25, "Invalid task ID!"
         
-#def test_values():    
-    #global score
-    #global CNT_Values
-   # try:
-        #from matplotlib_assignment import a,b,c,d,x,y
-    #except ImportError:
-        #pass
-    #CNT_Values = 3
-    #tmp = globals()
-   # print("globals!=%s",tmp)
-    #from test_image import CNT_Values
-   # if CNT_Values >= 1:
-     #   assert 'a' in tmp,f"Problems a 'a'={tmp}"
-     #   assert 'a' not in tmp,f"lll={tmp}"
-        #and (isinstance(tmp['a'],(int, float)) )
-        #CNT_Values = CNT_Values - 1
-        #if CNT_Values >= 1:
-            #assert ( ('b' in tmp) and (isinstance(tmp['b'],(int, float)) ),f"Problems a 'b'"
-            #CNT_Values -= 1
-            #if CNT_Values >= 1 :
-                #assert ( 'c' in tmp ) and (type(tmp['c']) == int or float),f"Problems a 'c'"
-                #CNT_Values -= 1
-                #if CNT_Values >= 1 :
-                    #assert ( 'd' in tmp ) and (type(tmp['d']) == int or float),f"Problems a 'd'"
-
-    #assert ( 'x' in tmp ) and ( isinstance(tmp['x'], (list, tuple, np.array)) ),f"Problems a 'x'"
-    #assert ( 'y' in tmp ) and ( isinstance(tmp['y'], (list, tuple, np.array)) ),f"Problems a 'y'"
-   # score += 1
 def test_value():
     global score
     param=["a","b","c","d","x","y"]
@@ -97,12 +69,8 @@ def test_value():
     for t in param:
         assert exec("from matplotlib_assignment import "+str(t))==None,f"Create a variable '{t}'!Don't forget to initialize it"
         if (t != "x") and (t != "y"):
-            print("gggggg=")
-            print(eval(t))
             assert isinstance( eval(t), (int, float) ),f"The variable '{t}' is not an int or float!"
         else:
-            print("FFF=")
-            print(eval(t))
             assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"
     score += 1
         
