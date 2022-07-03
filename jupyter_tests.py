@@ -61,22 +61,21 @@ def test_task_id():
     if Student_ID is not None:
         assert task_id > 0 and task_id <= 25, "Invalid task ID!"
         
-def test_values():
+def test_values():    
+    global score
+    global CNT_Values
     try:
         from matplotlib_assignment import a,b,c,d,x,y
     except ImportError:
         pass
-    global score
-    
+
     tmp = globals()
     #from test_image import CNT_Values
     if CNT_Values >= 1 :
-        assert 'a' in tmp,"ddd" 
-        assert ( (type(tmp['a']) == int or float ),"Problems a 'a'"
-        global CNT_Values
+        assert ( ('a' in tmp) and (isinstance(tmp['a'],(int, float)) ),"Problems a 'a'"
         CNT_Values = CNT_Values - 1
         if CNT_Values >= 1 :
-            assert (( 'b' in tmp ) and (type(tmp['b']) == int or float)),f"Problems a 'b'"
+            assert ( ('b' in tmp) and (isinstance(tmp['b'],(int, float)) ),f"Problems a 'b'"
             CNT_Values -= 1
             if CNT_Values >= 1 :
                 assert ( 'c' in tmp ) and (type(tmp['c']) == int or float),f"Problems a 'c'"
