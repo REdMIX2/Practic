@@ -73,20 +73,21 @@ def test_values():
     print("globals!=%s",tmp)
     #from test_image import CNT_Values
     if CNT_Values >= 1:
-        assert 'a' in tmp,"Problems a 'a'"
+        assert 'a' in tmp,f"Problems a 'a'={tmp}"
+        assert 'a' not in tmp,f"lll={tmp}"
         #and (isinstance(tmp['a'],(int, float)) )
         #CNT_Values = CNT_Values - 1
-        if CNT_Values >= 1:
-            assert ( ('b' in tmp) and (isinstance(tmp['b'],(int, float)) ),f"Problems a 'b'"
-            CNT_Values -= 1
-            if CNT_Values >= 1 :
-                assert ( 'c' in tmp ) and (type(tmp['c']) == int or float),f"Problems a 'c'"
-                CNT_Values -= 1
-                if CNT_Values >= 1 :
-                    assert ( 'd' in tmp ) and (type(tmp['d']) == int or float),f"Problems a 'd'"
+        #if CNT_Values >= 1:
+            #assert ( ('b' in tmp) and (isinstance(tmp['b'],(int, float)) ),f"Problems a 'b'"
+            #CNT_Values -= 1
+            #if CNT_Values >= 1 :
+                #assert ( 'c' in tmp ) and (type(tmp['c']) == int or float),f"Problems a 'c'"
+                #CNT_Values -= 1
+                #if CNT_Values >= 1 :
+                    #assert ( 'd' in tmp ) and (type(tmp['d']) == int or float),f"Problems a 'd'"
 
-    assert ( 'x' in tmp ) and ( isinstance(tmp['x'], (list, tuple, np.array)) ),f"Problems a 'x'"
-    assert ( 'y' in tmp ) and ( isinstance(tmp['y'], (list, tuple, np.array)) ),f"Problems a 'y'"
+    #assert ( 'x' in tmp ) and ( isinstance(tmp['x'], (list, tuple, np.array)) ),f"Problems a 'x'"
+    #assert ( 'y' in tmp ) and ( isinstance(tmp['y'], (list, tuple, np.array)) ),f"Problems a 'y'"
     score += 1
         
         
