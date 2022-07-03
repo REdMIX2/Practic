@@ -100,7 +100,7 @@ def test_value():
        #     print(t)
     del param[CNT_Values:3]
     for t in param:
-        assert exec("from matplotlib_assignment import "+str(t)),f"Create and initialize the variable '{t}'!"
+        assert exec("from matplotlib_assignment import "+str(t))==None,f"Create and initialize the variable '{t}'!"
     score += 1
         
 #def test_create_images():
