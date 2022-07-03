@@ -92,15 +92,15 @@ def test_task_id():
 def test_value():
     global score
     param=["a","b","c","d","x","y"]
-    for t in param:
-        try:
-            exec("from matplotlib_assignment import "+str(t))
-        except ImportError:
-            print("ggggggg=")
-            print(t)
+    #for t in param:
+       # try:
+       #     exec("from matplotlib_assignment import "+str(t))
+       # except ImportError:
+       #     print("ggggggg=")
+       #     print(t)
     del param[CNT_Values:3]
     for t in param:
-        assert exec("from matplotlib_assignment import "+str(t)),f"Create and initialize the variable{t}!"
+        assert exec("from matplotlib_assignment import "+str(t)),f"Create and initialize the variable '{t}'!"
     score += 1
         
 #def test_create_images():
