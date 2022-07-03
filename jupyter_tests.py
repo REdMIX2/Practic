@@ -2,7 +2,9 @@ import pytest
 
 from jupyter_assignment import READ_INTRODUCTION, LEARNED_ABOUT_JUPYTER, ACCESS_COLABORATORY, CREATED_GITHUB_ACCOUNT, github_username, my_name, greet
 
-from matplotlib_assignment import Student_ID, task_id, my_function,a,b,c,d,x,y
+from matplotlib_assignment import Student_ID, task_id, my_function
+
+    
 #from test_image import CNT_Values
 CNT_Values = 3
 import os
@@ -60,22 +62,29 @@ def test_task_id():
         assert task_id > 0 and task_id <= 25, "Invalid task ID!"
         
 def test_values():
+    try:
+        from matplotlib_assignment import a,b,c,d,x,y
+    except ImportError:
+        pass
     global score,CNT_Values
     tmp = globals()
     print("value global=")
     print(tmp)
     #from test_image import CNT_Values
-    if CNT_Values > 1 :
+    if CNT_Values >= 1 :
         assert ( 'a' in tmp ) and (type(tmp['a']) == int or float),f"Problems a 'a'"
         CNT_Values -= 1
-        if CNT_Values > 1 :
+        if CNT_Values >= 1 :
             assert ( 'b' in tmp ) and (type(tmp['b']) == int or float),f"Problems a 'b'"
             CNT_Values -= 1
-            if CNT_Values > 1 :
+            if CNT_Values >= 1 :
                 assert ( 'c' in tmp ) and (type(tmp['c']) == int or float),f"Problems a 'c'"
                 CNT_Values -= 1
-                if CNT_Values > 1 :
+                if CNT_Values >= 1 :
                     assert ( 'd' in tmp ) and (type(tmp['d']) == int or float),f"Problems a 'd'"
+
+    assert ( 'x' in tmp ) and ( isinstance(tmp['x'], (list, tuple, np.array)) ),f"Problems a 'x'"
+    assert ( 'y' in tmp ) and ( isinstance(tmp['y'], (list, tuple, np.array)) ),f"Problems a 'y'"
     score += 1
         
         
