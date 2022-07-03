@@ -1,4 +1,5 @@
 import pytest
+import numpy as np
 
 from jupyter_assignment import READ_INTRODUCTION, LEARNED_ABOUT_JUPYTER, ACCESS_COLABORATORY, CREATED_GITHUB_ACCOUNT, github_username, my_name, greet
 
