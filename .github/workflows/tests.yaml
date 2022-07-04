@@ -31,3 +31,6 @@ jobs:
           #jupyter nbconvert --to script matplotlib_assignment.ipynb
           #cat jupyter_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > jupyter_assignment.py
           #pytest -s jupyter_tests.py
+      - name: Test with pytest1
+        run: |
+          pytest --mpl-generate-path=baseline Create_img_3.py
