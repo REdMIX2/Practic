@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import pytest
-a=1
+a=1+1
 b=2
 c=3
 x = np.arange(0, 2*np.math.pi, 0.1)
