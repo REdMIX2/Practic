@@ -84,7 +84,7 @@ def test_create_images():
 def test_images():
     if task_id is not None:
         c=subprocess.run("pytest --mpl Add_img_"+str(task_id)+".py", shell=True)
-        assert c.returncode==-10,"Incorrect image!"
+        assert c.returncode==0,"Incorrect image!"
         
 def test_maths():
     if Student_ID is not None:
