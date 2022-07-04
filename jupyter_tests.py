@@ -80,7 +80,7 @@ def test_create_images():
         #c=subprocess.call("pytest --mpl-generate-path=baseline Create_img_"+str(CNT_Values)+".py", shell=True)
         c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_"+str(CNT_Values)+".py", shell=True)
         print(c.stderr)
-        assert c.returncode==2,"Image not generate!"
+        assert c.returncode==0,"Image not generate!"
         
 def test_maths():
     if Student_ID is not None:
