@@ -12,4 +12,4 @@ def test_succeeds():
   x = np.arange(0, 2*np.math.pi, 0.1)
   y=my_function(x,a,b,c)
   my_plot()
- return plt.gca().get_figure()
+  return plt.gca().get_figure()
