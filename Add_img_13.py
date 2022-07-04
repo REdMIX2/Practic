@@ -4,7 +4,7 @@ import pytest
 a=1
 b=2
 c=3
-x = [1,2,3]
+x = np.arange(0, 2*np.math.pi, 0.1)
 from matplotlib_assignment import my_plot
 def my_function(x, a, b, c):
   ### BEGIN YOUR CODE
