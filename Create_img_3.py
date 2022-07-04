@@ -1,5 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
+import pytest
 from matplotlib_assignment import my_function,my_plot
 
 @pytest.mark.mpl_image_compare(baseline_dir='baseline',
