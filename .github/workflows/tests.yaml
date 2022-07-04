@@ -34,3 +34,6 @@ jobs:
       - name: Test with pytest1
         run: |
           pytest --mpl-generate-path=baseline Create_img_3.py
+      - name: Test with pytest2
+        run: |
+          pytest --mpl Add_img_13.py
