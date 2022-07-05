@@ -9,7 +9,7 @@ from matplotlib_assignment import my_plot
 def my_function(x, a, b, c):
   ### BEGIN YOUR CODE
   import numpy as np
-  return a*(x ** 5) + b*(x ** 2) + c*x
+  return a+b+c+x
 y=my_function(x,a,b,c)
 @pytest.mark.mpl_image_compare(filename='other_name1.png',tolerance=3)
 def test_succeeds():
