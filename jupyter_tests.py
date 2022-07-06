@@ -80,14 +80,16 @@ def test_value():
     score += 1
         
 def test_create_images():
-    if task_id is not None:
-        c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_"+str(CNT_Values)+".py", shell=True)
-        assert c.returncode==0,"Image not generate!"
+    global score
+    c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_3.py", shell=True)
+    assert c.returncode==0,"Image not generate!"
+    score += 1
         
 def test_images():
-    if task_id is not None:
-        c=subprocess.run("pytest --mpl Add_img_"+str(13)+".py", shell=True)
-        assert c.returncode==0,"Incorrect image!"
+    global score
+    c=subprocess.run("pytest --mpl Add_img_13.py", shell=True)
+    assert c.returncode==0,"Incorrect image!"
+    score += 1
         
 def test_maths():
     if Student_ID is not None:
