@@ -70,7 +70,7 @@ def test_task_id():
 def test_value():
     global score
     param=["a","b","c","d","x","y"]
-    del param[CNT_argv[task_id]:4]
+    del param[CNT_Values:4]
     for t in param:
         assert exec("from matplotlib_assignment import "+str(t))==None,f"Create a variable '{t}'!Don't forget to initialize it"
         if (t != "x") and (t != "y"):
@@ -81,12 +81,12 @@ def test_value():
         
 def test_create_images():
     if task_id is not None:
-        c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_"+str(CNT_argv[task_id])+".py", shell=True)
+        c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_"+str(CNT_Values)+".py", shell=True)
         assert c.returncode==0,"Image not generate!"
         
 def test_images():
     if task_id is not None:
-        c=subprocess.run("pytest --mpl Add_img_"+str(CNT_argv[task_id])+".py", shell=True)
+        c=subprocess.run("pytest --mpl Add_img_"+str(CNT_Values)+".py", shell=True)
         assert c.returncode==0,"Incorrect image!"
         
 def test_maths():
