@@ -70,7 +70,7 @@ def test_task_id():
 def test_value():
     global score
     param=["a","b","c","d","x","y"]
-    del param[CNT_Values:4]
+    del param[CNT_argv[task_id]:4]
     for t in param:
         assert exec("from matplotlib_assignment import "+str(t))==None,f"Create a variable '{t}'!Don't forget to initialize it"
         if (t != "x") and (t != "y"):
