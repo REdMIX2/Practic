@@ -8,7 +8,7 @@ b=2
 c=3
 d=2
 x = np.arange(0, 2*np.math.pi, 0.1)
-y=[1,2,3]
+y=[]
 if CNT_argv[task_id] == 0:
   y=my_function(x)
 elif CNT_argv[task_id] == 1:
