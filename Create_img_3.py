@@ -8,6 +8,7 @@ b=2
 c=3
 d=2
 x = np.arange(0, 2*np.math.pi, 0.1)
+y=0
 match CNT_argv[task_id]:
   case 1:
     y=my_function(x)
