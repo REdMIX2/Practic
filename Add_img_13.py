@@ -11,7 +11,7 @@ def my_function(x, a, b, c):
   import numpy as np
   return a+b+c+x
 y=my_function(x,a,b,c)
-@pytest.mark.mpl_image_compare(filename='other_name1.png',tolerance=3)
+@pytest.mark.mpl_image_compare(baseline_dir='baseline',filename='other_name1.png',tolerance=3)
 def test_succeeds():
   plt.plot(x, y, color='purple', marker='o', linewidth=1, markersize=10)
   #my_plot()
