@@ -8,11 +8,11 @@ from matplotlib_assignment import Student_ID, task_id, my_function
     
 #from test_image import CNT_Values
 CNT_Values = 3
-CNT_argv[25]=[3,3,3,3,3,
-              3,3,3,3,3,
-              3,3,3,3,3,
-              3,3,3,3,3,
-              3,3,3,3,3]
+CNT_argv=[3,3,3,3,3,
+          3,3,3,3,3,
+          3,3,3,3,3,
+          3,3,3,3,3,
+          3,3,3,3,3]
 import os
 
 
