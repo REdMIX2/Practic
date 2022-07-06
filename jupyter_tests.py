@@ -86,7 +86,7 @@ def test_create_images():
         
 def test_images():
     if task_id is not None:
-        c=subprocess.run("pytest --mpl Add_img_"+str(CNT_Values)+".py", shell=True)
+        c=subprocess.run("pytest --mpl Add_img_"+str(13)+".py", shell=True)
         assert c.returncode==0,"Incorrect image!"
         
 def test_maths():
