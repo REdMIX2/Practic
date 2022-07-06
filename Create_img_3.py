@@ -9,19 +9,18 @@ c=3
 d=2
 x = np.arange(0, 2*np.math.pi, 0.1)
 y=[]
-match CNT_argv[task_id]:
-  case 1:
-    global y
-    y=my_function(x)
-  case 2:
-    global y
-    y=my_function(x,a)
-  case 3:
-    global y
-    y=my_function(x,a,b)
-  case 4:
-    global y
-    y=my_function(x,a,b,c,d)
+if CNT_argv[task_id] == 1:
+  global y
+  y=my_function(x)
+elseif CNT_argv[task_id] == 2:
+  global y
+  y=my_function(x,a)
+elseif CNT_argv[task_id] == 3:
+  global y
+  y=my_function(x,a,b)
+elseif CNT_argv[task_id] == 4:
+  global y
+  y=my_function(x,a,b,c,d)
 @pytest.mark.mpl_image_compare(filename='other_name1.png',tolerance=3)
 def test_succeeds():
   my_plot()
