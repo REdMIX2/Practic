@@ -10,19 +10,14 @@ d=2
 x = np.arange(0, 2*np.math.pi, 0.1)
 y=[1,2,3]
 if CNT_argv[task_id] == 0:
-  global y
   y=my_function(x)
 elif CNT_argv[task_id] == 1:
-  global y
   y=my_function(x,a)
 elif CNT_argv[task_id] == 2:
-  global y
   y=my_function(x,a,b,c)
 elif CNT_argv[task_id] == 3:
-  global y
   y=my_function(x,a,b,c)
 elif CNT_argv[task_id] == 4:
-  global y
   y=my_function(x,a,b,c,d)
 @pytest.mark.mpl_image_compare(filename='other_name1.png',tolerance=3)
 def test_succeeds():
