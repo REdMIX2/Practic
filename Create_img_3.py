@@ -14,7 +14,7 @@ if CNT_argv[task_id] == 0:
 elif CNT_argv[task_id] == 1:
   y=my_function(x,a)
 elif CNT_argv[task_id] == 2:
-  y=my_function(x,a,b,c)
+  y=my_function(x,a,b)
 elif CNT_argv[task_id] == 3:
   y=my_function(x,a,b,c)
 elif CNT_argv[task_id] == 4:
