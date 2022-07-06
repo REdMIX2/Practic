@@ -32,9 +32,9 @@ jobs:
           #cat jupyter_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > jupyter_assignment.py
           #pytest -s jupyter_tests.py
           # My code
-      #- name: Test with pytest1
-       # run: |
-        #  pytest --mpl-generate-path=baseline Create_img_3.py
-      #- name: Test with pytest2
-       # run: |
-        #  pytest --mpl Add_img_13.py
+      - name: Test with pytest1
+        run: |
+          pytest --mpl-generate-path=baseline Create_img_3.py
+      - name: Test with pytest2
+        run: |
+          pytest --mpl Add_img_13.py
