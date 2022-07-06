@@ -8,22 +8,21 @@ b=2
 c=3
 d=2
 x = np.arange(0, 2*np.math.pi, 0.1)
-y=[]
 if CNT_argv[task_id] == 0:
-  global y
   y=my_function(x)
+  global y
 elif CNT_argv[task_id] == 1:
-  global y
   y=my_function(x,a)
+  global y
 elif CNT_argv[task_id] == 2:
-  global y
   y=my_function(x,a,b,c)
+  global y
 elif CNT_argv[task_id] == 3:
-  global y
   y=my_function(x,a,b,c)
-elif CNT_argv[task_id] == 4:
   global y
+elif CNT_argv[task_id] == 4:
   y=my_function(x,a,b,c,d)
+  global y
 @pytest.mark.mpl_image_compare(filename='other_name1.png',tolerance=3)
 def test_succeeds():
   my_plot()
