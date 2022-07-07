@@ -8,11 +8,11 @@ from matplotlib_assignment import Student_ID, task_id, my_function
     
 #from test_image import CNT_Values
 CNT_Values = 3
-CNT_argv=[3,3,3,3,3,
-          3,3,3,3,3,
-          3,3,3,3,3,
-          3,3,3,3,3,
-          3,3,3,3,3]
+CNT_argv=[4,3,3,3,3,
+          4,4,4,3,4,
+          2,3,3,0,4,
+          3,2,3,4,3,
+          4,3,3,4,3]
 import os
 
 
@@ -70,7 +70,7 @@ def test_task_id():
 def test_value():
     global score
     param=["a","b","c","d","x","y"]
-    del param[CNT_argv[task_id]:4]
+    del param[CNT_argv[task_id-1]:4]
     for t in param:
         assert exec("from matplotlib_assignment import "+str(t))==None,f"Create a variable '{t}'!Don't forget to initialize it"
         if (t != "x") and (t != "y"):
@@ -87,7 +87,7 @@ def test_create_images():
         
 def test_images():
     global score
-    c=subprocess.run("pytest --mpl Add_img_13.py", shell=True)
+    c=subprocess.run("pytest --mpl test_img.py", shell=True)
     assert c.returncode==0,"Incorrect image!"
     score += 1
 
