@@ -8,7 +8,7 @@ a=0
 b=0
 c=0
 d=0
-x = np.arange(0, 2*np.math.pi, 0.1)
+x = []
 y=[]
 if task_id == 1:
   a = 3
@@ -43,10 +43,11 @@ elif task_id == 6:
   d = 8
   x = np.linspace(-100, 100, 100)
 elif task_id == 7:
+  a = 0.5
   b = 1
-  c = 1
-  d = 2
-  x = np.linspace(0, 0.5, 20)
+  c = -3
+  d = 0.5
+  x = np.linspace(-8, 6, 100)
 elif task_id == 8:
   a = 2
   b = 3
@@ -99,7 +100,6 @@ elif task_id == 18:
   a=2
   b=2
   c=2
-  d=2
   x = np.arange(0, 10, 100)
 elif task_id == 19: 
   a = -2
@@ -140,11 +140,6 @@ elif task_id == 25:
   c = 4
   x = np.linspace(-1 * np.pi, 1.5 * np.pi, 1000)
   ############################################################################################################################################
-#elif task_id == 6:
-  #a = 5
-  #b = -9
-  #c = 100
-  #x = np.linspace(0, 3, 100)
   
 if CNT_argv[task_id] == 0:
   y=my_function(x)
