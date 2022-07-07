@@ -90,7 +90,13 @@ def test_images():
     c=subprocess.run("pytest --mpl Add_img_13.py", shell=True)
     assert c.returncode==0,"Incorrect image!"
     score += 1
-        
+
+def test_Latex_formula():
+    global score
+    c=subprocess.run("pytest --mpl test_Latex.py3.py", shell=True)
+    assert c.returncode==0,"Incorrect Latex formula!"
+    score += 1   
+    
 def test_maths():
     if Student_ID is not None:
         import numpy as np
