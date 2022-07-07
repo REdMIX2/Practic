@@ -18,7 +18,7 @@ tex = tex[1:-1]
 print(tex)
 ########
 from matplotlib_assignment import task_id
-name_latex_file="Latex_+str(task_id)+".png"
+name_latex_file="Latex_"+str(task_id)+".png"
 #tex = '$\\frac{1}{\\sqrt{2\\sqrt{2\\pi}}} \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)$'
 @pytest.mark.mpl_image_compare(baseline_dir='formula_Latex',
                                filename=name_latex_file,tolerance=3)
