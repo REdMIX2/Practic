@@ -41,4 +41,4 @@ def test_succeeds():
   # Установка размеров области отрисовки
   fig.set_size_inches(bbox.width/80,bbox.height/80) # dpi=80
 
-  return fig
+  return plt.gca().get_figure()
