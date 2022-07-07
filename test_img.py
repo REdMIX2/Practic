@@ -152,7 +152,9 @@ elif CNT_argv[task_id] == 3:
 elif CNT_argv[task_id] == 4:
   y=my_function(x,a,b,c,d)
 
-@pytest.mark.mpl_image_compare(filename='other_name1.png',tolerance=3)
+name_latex_file="Image_"+str(task_id)+".png"
+@pytest.mark.mpl_image_compare(baseline_dir='Images',
+                               filename=name_latex_file,tolerance=3)
 def test_succeeds():
   my_plot()
   return plt.gca().get_figure()
