@@ -79,11 +79,11 @@ def test_value():
             assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"
     score += 1
         
-#def test_create_images():
-    #global score
-    #c=subprocess.run("pytest --mpl-generate-path=baseline Create_img_3.py", shell=True)
-    #assert c.returncode==0,"Image not generate!"
-    #score += 1
+def test_create_images():
+    global score
+    c=subprocess.run("pytest --mpl-generate-path=images_of_graphs Add_img_13.py", shell=True)
+    assert c.returncode==0,"Image not generate!"
+    score += 1
         
 def test_images():
     global score
