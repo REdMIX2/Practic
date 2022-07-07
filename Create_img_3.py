@@ -65,9 +65,9 @@ elif task_id == 10:
   d = 7
   x = np.linspace(0, 2*np.math.pi, 100)
 elif task_id == 11:
-  a = 1
-  b = 3
-  x = np.linspace(1, 5, 60)
+  a = 6
+  b = 2
+  x = np.linspace(0, 100, 1000)
 elif task_id == 12:
   a = 5
   b = 3
@@ -140,56 +140,11 @@ elif task_id == 25:
   c = 4
   x = np.linspace(-1 * np.pi, 1.5 * np.pi, 1000)
   ############################################################################################################################################
-elif task_id == 21: 
-  a = 1
-  b = 3
-  c = 5
-  d = 46
-  x = np.linspace(-200,200, 200)
-elif task_id == 11:
-  a = 6
-  b = 2
-  x = np.linspace(0, 10, 100)
-elif task_id == 6:
-  a = 100000
-  b = 10000
-  c = 2
-  d = 8
-  x = np.linspace(-100, 100, 100)
-elif task_id == 6:
-  a = 5
-  b = -9
-  c = 100
-  x = np.linspace(0, 3, 100)
-elif task_id == 10:
-  a = 3
-  b = 4
-  c = 2
-  d = 7
-  x = np.linspace(0, 2*np.math.pi, 100)
-elif task_id == 22:
-  a = 2
-  b = 3
-  c = -5
-  x = np.linspace(0, 10, 200)
-elif task_id == 13:
-  a = 1
-  b = 2
-  c = 3
-  x = np.arange(0, 2*np.pi, 0.1)
-elif task_id == 14:
-  x = np.linspace(-2.1,2.1, 1000)
-elif task_id == 20:
-  a = 5
-  b = 10
-  c = 3
-  x = np.linspace(0,10,100)
-elif task_id == 1:
-  a = 3
-  b = 2
-  c = 4
-  d = 1
-  x = np.linspace(-10, 10, 100)
+#elif task_id == 6:
+  #a = 5
+  #b = -9
+  #c = 100
+  #x = np.linspace(0, 3, 100)
   
 if CNT_argv[task_id] == 0:
   y=my_function(x)
