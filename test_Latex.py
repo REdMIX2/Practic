@@ -17,9 +17,11 @@ for i in data["cells"]:
 tex = tex[1:-1]  
 print(tex)
 ########
+from matplotlib_assignment import task_id
+name_latex_file="Latex_+str(task_id)+".png"
 #tex = '$\\frac{1}{\\sqrt{2\\sqrt{2\\pi}}} \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)$'
-@pytest.mark.mpl_image_compare(baseline_dir='baseline',
-                               filename='other_name1.png',tolerance=3)
+@pytest.mark.mpl_image_compare(baseline_dir='formula_Latex',
+                               filename=name_latex_file,tolerance=3)
 def test_succeeds():  
   ### Создание области отрисовки
   fig = plt.figure()
@@ -35,13 +37,8 @@ def test_succeeds():
   ### Определение размеров формулы
   ax.figure.canvas.draw()
   bbox = t.get_window_extent()
-  #print( bbox,width, bbox.height)
 
   # Установка размеров области отрисовки
   fig.set_size_inches(bbox.width/80,bbox.height/80) # dpi=80
-  
-  ### Отрисовка или сохранение формулы в файл
- # plt.show()
-  #plt.savefig('test.svg')
-  #plt.savefig('test.png', dpi=300)
+
   return fig
