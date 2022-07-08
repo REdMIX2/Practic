@@ -142,17 +142,17 @@ elif task_id == 25:
   x = np.linspace(-1 * np.pi, 1.5 * np.pi, 1000)
   ############################################################################################################################################
   
-if CNT_argv[task_id] == 0:
-  y=my_function(x)
-elif CNT_argv[task_id] == 1:
-  y=my_function(x,a)
-elif CNT_argv[task_id] == 2:
-  y=my_function(x,a,b)
-elif CNT_argv[task_id] == 3:
-  y=my_function(x,a,b,c)
-elif CNT_argv[task_id] == 4:
-  y=my_function(x,a,b,c,d)
-
+#if CNT_argv[task_id] == 0:
+ # y=my_function(x)
+#elif CNT_argv[task_id] == 1:
+ # y=my_function(x,a)
+#elif CNT_argv[task_id] == 2:
+ # y=my_function(x,a,b)
+#elif CNT_argv[task_id] == 3:
+ # y=my_function(x,a,b,c)
+#elif CNT_argv[task_id] == 4:
+# y=my_function(x,a,b,c,d)
+y=my_function(x,a,b,c)
 name_latex_file="Image_"+str(task_id)+".png"
 @pytest.mark.mpl_image_compare(baseline_dir='images_of_graphs',
                                filename=name_latex_file,tolerance=3)
