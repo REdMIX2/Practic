@@ -7,7 +7,6 @@ from matplotlib_assignment import Student_ID, task_id, my_function
 
     
 #from test_image import CNT_Values
-CNT_Values = 3
 CNT_argv=[4,3,3,3,3,
           4,4,4,3,4,
           2,3,3,0,4,
@@ -85,7 +84,7 @@ def test_value():
     #assert c.returncode==0,"Image not generate!"
     #score += 1
     
-def test_formula_img():
+def test_formula():
     global score
     c=subprocess.run("pytest --mpl test_formula_img.py", shell=True)
     assert c.returncode==0,"Incorrect formula in my_function!"
