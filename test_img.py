@@ -2,8 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import pytest
 from jupyter_tests import CNT_argv
-from matplotlib_assignment import my_function,my_plot#,task_id
-task_id=13
+from matplotlib_assignment import my_function,my_plot,task_id
 
 a=0
 b=0
