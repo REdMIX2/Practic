@@ -79,11 +79,11 @@ def test_value():
             assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"
     score += 1
         
-def test_create_images():
-    global score
-    c=subprocess.run("pytest --mpl-generate-path=images_of_graphs Add_img_13.py", shell=True)
-    assert c.returncode==0,"Image not generate!"
-    score += 1
+#def test_create_images():
+    #global score
+    #c=subprocess.run("pytest --mpl-generate-path=images_of_graphs Add_img_13.py", shell=True)
+    #assert c.returncode==0,"Image not generate!"
+    #score += 1
         
 def test_images():
     global score
@@ -96,7 +96,8 @@ def test_Latex_formula():
     c=subprocess.run("pytest --mpl test_Latex.py", shell=True)
     assert c.returncode==0,"Incorrect Latex formula!"
     score += 1   
-    
+
+    #Delete?   
 def test_maths():
     if Student_ID is not None:
         import numpy as np
