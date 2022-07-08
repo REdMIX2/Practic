@@ -84,13 +84,19 @@ def test_value():
     #c=subprocess.run("pytest --mpl-generate-path=images_of_graphs Add_img_13.py", shell=True)
     #assert c.returncode==0,"Image not generate!"
     #score += 1
-        
+    
+def test_formula_img():
+    global score
+    c=subprocess.run("pytest --mpl test_formula_img.py", shell=True)
+    assert c.returncode==0,"Incorrect formula in my_function!"
+    score += 1 
+    
 def test_images():
     global score
     c=subprocess.run("pytest --mpl test_img.py", shell=True)
     assert c.returncode==0,"Incorrect image!"
     score += 1
-
+    
 def test_Latex_formula():
     global score
     c=subprocess.run("pytest --mpl test_Latex.py", shell=True)
