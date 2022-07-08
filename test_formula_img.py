@@ -151,9 +151,9 @@ elif CNT_argv[task_id-1] == 3:
   y=my_function(x,a,b,c)
 elif CNT_argv[task_id-1] == 4:
   y=my_function(x,a,b,c,d)
-name_latex_file="Image_"+str(task_id)+".png"
-@pytest.mark.mpl_image_compare(baseline_dir='images_of_graphs',
+name_latex_file="Image_formula_"+str(task_id)+".png"
+@pytest.mark.mpl_image_compare(baseline_dir='images_of_graphs_formula',
                                filename=name_latex_file,tolerance=3)
 def test_succeeds():
-  my_plot()
+  plt.plot(x, y, color='purple', marker='o', linewidth=1, markersize=10)
   return plt.gca().get_figure()
