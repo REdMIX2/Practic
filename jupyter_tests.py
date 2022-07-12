@@ -86,6 +86,7 @@ def test_value():
     
 def test_formula():
     global score
+    c=subprocess.run("pytest --mpl-generate-path=formula_Latex test_formula_img.py", shell=True)
     c=subprocess.run("pytest --mpl test_formula_img.py", shell=True)
     assert c.returncode==0,"Incorrect formula in my_function!"
     score += 1 
