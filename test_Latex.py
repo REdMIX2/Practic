@@ -17,6 +17,8 @@ for i in data["cells"]:
 tex = tex[1:-1]  
 print(tex)
 ########
+ plt.rc('text', usetex=True)
+
 from matplotlib_assignment import task_id
 name_latex_file="Latex_"+str(task_id)+".png"
 #tex = '$\\frac{1}{\\sqrt{2\\sqrt{2\\pi}}} \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)$'
