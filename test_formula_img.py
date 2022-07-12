@@ -153,7 +153,7 @@ elif CNT_argv[task_id-1] == 4:
   y=my_function(x,a,b,c,d)
 name_img_formula_file="Image_formula_"+str(task_id)+".png"
 @pytest.mark.mpl_image_compare(baseline_dir='images_of_graphs_formula',
-                               filename=name_img_formula_file,tolerance=1)
+                               filename=name_img_formula_file,tolerance=3)
 def test_succeeds():
   plt.plot(x, y, color='purple', marker='o', linewidth=1, markersize=10)
   return plt.gca().get_figure()
