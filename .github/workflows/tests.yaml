@@ -30,6 +30,7 @@ jobs:
           cat jupyter_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > jupyter_assignment.py
           echo "step 3"
           cat matplotlib_assignment_dirty.py | grep -v "^#" | grep -v "^$" | grep -v "get_ipython()" | grep -vE "(\s|=|^)input\(" > matplotlib_assignment.py
+          cat matplotlib_assignment.py
           echo "step 4"
           pytest -s jupyter_tests.py
           echo "step 5"
