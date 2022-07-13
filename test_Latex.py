@@ -17,7 +17,7 @@ for i in data["cells"]:
 tex = tex[1:-1]  
 print(tex)
 ########
- plt.rc('text', usetex=True)
+ #plt.rc('text', usetex=True)
 
 from matplotlib_assignment import task_id
 name_latex_file="Latex_"+str(task_id)+".png"
