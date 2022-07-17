@@ -17,7 +17,7 @@ for i in data["cells"]:
        t=i["source"][0].find("$$")
        break
 tex=tex[t+1:tex.find("$$",t+1)+1]#delete $$
-#print(tex)
+print(tex)
 ########
 
 
@@ -26,21 +26,21 @@ if task_id==14:
   p_b=tex.find(r"\begin{cases}")#delete "\begin{cases}"
   if p_b != -1:
     tex=tex[:p_b]+tex[p_b+13:]
-    #print(tex)
+    print(tex)
   else:
     raise NameError('Incorrect Latex formula')
   p_e=tex.find(r"\end{cases}")
   if p_e != -1:
     tex=tex[:p_e]+tex[p_e+11:]#delete "\end{cases}"
-    #print(tex)
+    print(tex)
   else:
     raise NameError('Incorrect Latex formula')  
   p_slash=tex.find("\\")
   p_slash=tex.find("\\",p_slash+1)
-  #print(p_slash)
+  print(p_slash)
   if p_slash != -1:
     tex=tex[:p_slash]+tex[p_slash+2:]
-    #print(tex)
+    print(tex)
   else:
     raise NameError('Incorrect Latex formula')
 
