@@ -57,7 +57,7 @@ def test_succeeds():
         horizontalalignment='center',
         verticalalignment='center',
         fontsize=20, color='black')
-  print(tex)      
+  #print(tex)      
   ### Определение размеров формулы
   ax.figure.canvas.draw()
   bbox = t.get_window_extent()
@@ -65,11 +65,5 @@ def test_succeeds():
   # Установка размеров области отрисовки
   fig.set_size_inches(bbox.width/80,bbox.height/80) # dpi=80
 
-  #return fig
-  ### Отрисовка или сохранение формулы в файл
-  plt.show()
-  #plt.savefig('test.svg')
-  plt.savefig('test.png', dpi=300)
   return fig
 
-test_succeeds()
