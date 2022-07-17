@@ -155,5 +155,8 @@ name_img_file="Image_"+str(task_id)+".png"
 @pytest.mark.mpl_image_compare(baseline_dir='images_of_graphs',
                                filename=name_img_file,tolerance=10)
 def test_succeeds():
+  print(x)
+  print(y)
+  print(task_id)
   my_plot()
   return plt.gca().get_figure()
