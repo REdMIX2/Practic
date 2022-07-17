@@ -35,8 +35,6 @@ jobs:
           echo "step 4"
           pytest -s jupyter_tests.py
           echo "step 5"
-          pytest --mpl test_img.py
-          echo "step 6"
           #Dont my code
           #jupyter nbconvert --to script --output "jupyter_assignment_dirty" jupyter_assignment.ipynb
           #jupyter nbconvert --to script matplotlib_assignment.ipynb
