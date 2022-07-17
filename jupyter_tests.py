@@ -93,6 +93,8 @@ def test_formula():
 def test_images():
     global score
     c=subprocess.run("pytest --mpl test_img.py", shell=True)
+    tmp =c.stdout.decode('utf-8')
+    print(tmp)
     assert c.returncode==0,"Incorrect image!"
     score += 1
     
