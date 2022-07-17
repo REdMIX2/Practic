@@ -99,7 +99,7 @@ def test_images():
 def test_Latex_formula():
     global score
     c=subprocess.run("pytest --mpl test_Latex.py", shell=True)
-    #assert c.returncode==0,"Incorrect Latex formula!"
+    assert c.returncode==0,"Incorrect Latex formula!"
     score += 1   
 
     #Delete?   
