@@ -97,7 +97,7 @@ def test_images():
     c=subprocess.run("pytest --mpl test_img.py", shell=True)
     print(c.stderr)
     print(c.stdout)
-    #assert c.returncode==0,"Incorrect image!"
+    assert c.returncode==0,"Incorrect image!"
     score += 1
     
 def test_Latex_formula():
