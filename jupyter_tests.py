@@ -86,11 +86,11 @@ def test_value():
     #assert c.returncode==0,"Image not generate!"
     #score += 1
     
-def test_formula():
-    global score
-    c=subprocess.run("pytest --mpl test_formula_img.py", shell=True)
-    assert c.returncode==0,"Incorrect formula in my_function!"
-    score += 1 
+#def test_formula():
+    #global score
+    #c=subprocess.run("pytest --mpl test_formula_img.py", shell=True)
+    #assert c.returncode==0,"Incorrect formula in my_function!"
+    #score += 1 
     
 def test_images():
     global score
