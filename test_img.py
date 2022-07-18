@@ -158,5 +158,5 @@ def test_succeeds():
   print(x)
   print(y)
   print(task_id)
-  my_plot()
+  my_plot(x,y)
   return plt.gca().get_figure()
