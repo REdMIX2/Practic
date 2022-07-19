@@ -103,8 +103,7 @@ def test_Latex_formula():
     c=subprocess.run("pytest --mpl test_Latex.py", shell=True)
     assert c.returncode==0,"Incorrect Latex formula!"
     score += 1   
-
-    #Delete?   
+  
 def test_maths():
     if Student_ID is not None:
         import numpy as np
@@ -113,9 +112,79 @@ def test_maths():
             assert my_function(np.array([1]),1,1,1,1) == 4
             assert my_function(np.array([2]),2,2,2,2) == 78
         elif task_id == 2:
-            assert math.isclose(my_function(np.array([0]),2,2,0,0), 0)
-            assert math.isclose(my_function(np.array([0]),2,2,0,-10), 0)
-    
+            assert math.isclose(my_function(np.array([0]),2,2,3),0.28, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),2,1,2),-1.51, abs_tol = 0.1)
+        elif task_id == 3:
+            assert math.isclose(my_function(np.array([0]),3,2,1),1.56, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),1,2,0),-0.14, abs_tol = 0.1)
+        elif task_id == 4:
+            assert math.isclose(my_function(np.array([0]),2,1,3),0, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),2,3,0),2.2, abs_tol = 0.1)
+        elif task_id == 5:
+            assert math.isclose(my_function(np.array([1]),5,2,4),-8.96, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),2,1,2),-1.83, abs_tol = 0.1)
+        elif task_id == 6:
+            assert math.isclose(my_function(np.array([0]),3,4,2,10),0.3, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),1,1,0,2),2.58, abs_tol = 0.1)
+        elif task_id == 7:
+            assert math.isclose(my_function(np.array([0]),3,3,2,2),4, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),4,3,1,2),256, abs_tol = 0.1)
+        elif task_id == 8:
+            assert math.isclose(my_function(np.array([1]),10,10,5,1),-0.11, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([3]),2,5,4,1),0.67, abs_tol = 0.1)
+        elif task_id == 9:
+            assert math.isclose(my_function(np.array([0]),4,-2,4), 0.34, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),5,-2,4), 0.13, abs_tol = 0.1)
+        elif task_id == 10:
+            assert math.isclose(my_function(np.array([0]),1,1,1,1), 0, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),0,5,2,2), 1.82, abs_tol = 0.1)
+        elif task_id == 11:
+            assert math.isclose(my_function(np.array([1]),8,1), 6.73, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),2,2), -6.05, abs_tol = 0.1)
+        elif task_id == 12:
+            assert math.isclose(my_function(np.array([1]),1,6,2), 1.72, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),3,32,2), 3.38, abs_tol = 0.1)
+        elif task_id == 13:
+            assert math.isclose(my_function(np.array([0]),1,1,2), 2, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),2,1,3), 1, abs_tol = 0.1)
+        elif task_id == 14:
+            tmp=my_function(np.array([0]))
+            assert math.isclose(tmp[0][0],0, abs_tol = 0.1) and math.isclose(tmp[0][1],-np.pi, abs_tol = 0.1)
+            tmp=my_function(np.array([1]))
+            assert math.isclose(tmp[0][0],1, abs_tol = 0.1) and math.isclose(tmp[0][1],-1.57, abs_tol = 0.1)
+        elif task_id == 15:
+            assert math.isclose(my_function(np.array([1]),1,1,1,1), 4, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),0,1,2,0), 8, abs_tol = 0.1)
+        elif task_id == 16:
+            assert math.isclose(my_function(np.array([0]),3,3,3), 0, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),4,1,2), 8.27, abs_tol = 0.1)
+        elif task_id == 17:
+            assert math.isclose(my_function(np.array([-1]),5,1), 2.7, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),4,2), -1.66, abs_tol = 0.1)
+        elif task_id == 18:
+            assert math.isclose(my_function(np.array([0]),1.5,0.5,1), 0.81, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),4,0.5,2), -3.2, abs_tol = 0.1)
+        elif task_id == 19:
+            assert math.isclose(my_function(np.array([0]),1,1,1,1), 1, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),0.5,2,5,3), -4.5, abs_tol = 0.1)
+        elif task_id == 20:
+            assert math.isclose(my_function(np.array([1]),5,-3,1), -3.95, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),5,-3,1), 3.4, abs_tol = 0.1)
+        elif task_id == 21:
+            assert math.isclose(my_function(np.array([1]),1,1,1,1), 4, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),1,-3,1,2), -4, abs_tol = 0.1)
+        elif task_id == 22:
+            assert math.isclose(my_function(np.array([1],dtype=float),6,2,2), 6, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([2]),5,1,-10), 320, abs_tol = 0.1)
+        elif task_id == 23:
+            assert math.isclose(my_function(np.array([2]),10,2,1), 0.26, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([0.03]),2,7,10), 1.05, abs_tol = 0.1)
+        elif task_id == 24:
+            assert math.isclose(my_function(np.array([0.05]),5,2,1,1), -26.74, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),4,1,2,1), -4.39, abs_tol = 0.1)
+        elif task_id == 25:
+            assert math.isclose(my_function(np.array([0]),2,3,2), -0.46, abs_tol = 0.1)
+            assert math.isclose(my_function(np.array([1]),3,4,5), -1.57, abs_tol = 0.1)
 
 
 @pytest.fixture(scope="session", autouse=True)
