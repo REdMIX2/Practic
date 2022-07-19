@@ -76,8 +76,7 @@ def test_value():
         if (t != "x") and (t != "y"):
             assert isinstance( eval(t), (int, float) ),f"The variable '{t}' is not an int or float!"
         else:
-            assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"
-    score += 1    
+            assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"    
  
 #Test plot()
 def test_images():
@@ -91,7 +90,8 @@ def test_Latex_formula():
     global score
     c=subprocess.run("pytest --mpl test_Latex.py", shell=True)
     assert c.returncode==0,"Incorrect Latex formula!"
-    score += 1   
+    score += 1 
+    
 #Test formula in my_function()
 def test_maths():
     if Student_ID is not None:
