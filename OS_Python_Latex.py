@@ -33,6 +33,7 @@ if task_id ==-1:
 
 if task_id==25:# удаление файла
   os.remove('DB_P.py') 
+#В Var_tex должны быть формулы окружены одним символом $, НЕ ДВУМЯ!
 Var_tex=[r'$y=ax^5+bx^2+cx+d$',              r'$y=a\sin(bx+c)$',            r'$y=\tan(ax^2+bx+c)$',                r'$y=a\ln(b+cx)$',               r'$y=a\ln\frac{x}{b+cx}$',
          r'$y = log_{d}(ax^2+bx+c)$',        r'$y = d^{ax^2+bx+c}$',        r'$y = log_{a}{log_{b}{(cx+d)}}$',     r'$y=\frac{1}{a \ln{|bx+c|}}$',  r'$y=a\sin{bx}+c\sin{dx}$',
          r'$y=ax^2\sin{bx}$',                r'$y=a\frac{\sin(bx)}{x}+c$',  r'$y= \sqrt{\frac{c^2-ax^2}{b}}$',     r'$\begin{cases} y = \sqrt{1-(|x|-1)^{2}} \\ y = arccos(1-|x|)-\pi  \end{cases}$', r'$y=ax^3+bx^2+cx+d$',
