@@ -153,7 +153,7 @@ elif CNT_argv[task_id-1] == 4:
   y=my_function(x,a,b,c,d)
 name_img_file="Image_"+str(task_id)+".png"
 @pytest.mark.mpl_image_compare(baseline_dir='images_of_graphs',
-                               filename=name_img_file,tolerance=10)
+                               filename=name_img_file,tolerance=1)
 def test_succeeds():
   print(x)
   print(y)
