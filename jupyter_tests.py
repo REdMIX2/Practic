@@ -8,7 +8,6 @@ from jupyter_assignment import READ_INTRODUCTION, LEARNED_ABOUT_JUPYTER, ACCESS_
 from matplotlib_assignment import Student_ID, task_id, my_function
 
     
-#from test_image import CNT_Values
 CNT_argv=[4,3,3,3,3,
           4,4,4,3,4,
           2,3,3,0,4,
@@ -78,32 +77,22 @@ def test_value():
             assert isinstance( eval(t), (int, float) ),f"The variable '{t}' is not an int or float!"
         else:
             assert isinstance( eval(t), (list,tuple,np.ndarray) ),f"The variable '{t}' is not an array!"
-    score += 1
-        
-#def test_create_images():
-    #global score
-    #c=subprocess.run("pytest --mpl-generate-path=images_of_graphs Add_img_13.py", shell=True)
-    #assert c.returncode==0,"Image not generate!"
-    #score += 1
-    
-#def test_formula():
-    #global score
-    #c=subprocess.run("pytest --mpl test_formula_img.py", shell=True)
-    #assert c.returncode==0,"Incorrect formula in my_function!"
-    #score += 1 
-    
+    score += 1    
+ 
+#Test plot()
 def test_images():
     global score
     c=subprocess.run("pytest --mpl test_img.py", shell=True)
     assert c.returncode==0,"Incorrect image!"
     score += 1
-    
+  
+ #Test Latex formula   
 def test_Latex_formula():
     global score
     c=subprocess.run("pytest --mpl test_Latex.py", shell=True)
     assert c.returncode==0,"Incorrect Latex formula!"
     score += 1   
-  
+#Test formula in my_function()
 def test_maths():
     if Student_ID is not None:
         import numpy as np
